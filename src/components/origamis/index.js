@@ -1,36 +1,35 @@
 import React, { Component } from 'react'
 import styles from './index.module.css'
 import Origam from '../origam';
-
 class Origamis extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
       origamis: []
-    }
+    };
   }
 
   getOrigamis = async () => {
-    const promise = await fetch('http://localhost:9999/api/origami')
-    const origamis = await promise.json()
+    const promise = await fetch('http://localhost:9999/api/origami');
+    const origamis = await promise.json();
     this.setState({
       origamis
-    })
+    });
   }
 
   renderOrigamis() {
-    const { origamis } = this.state
+    const { origamis } = this.state;
 
     return origamis.map(origam => {
       return (
         <Origam key={origam._id} {...origam} />
-      )
-    })
+      );
+    });
   }
 
   componentDidMount() {
-    this.getOrigamis()
+    this.getOrigamis();
   }
 
   render() {
@@ -45,4 +44,4 @@ class Origamis extends Component {
   }
 }
 
-export default Origamis
+export default Origamis;

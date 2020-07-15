@@ -1,6 +1,6 @@
-import React from 'react'
-import Link from '../link'
-import styles from './index.module.css'
+import React from 'react';
+import Link from '../link';
+import styles from './index.module.css';
 
 const Aside = () => {
   return (
@@ -13,6 +13,6 @@ const Aside = () => {
       <Link href="#" title="Going to 6" type="aside" />
     </aside>
   )
-}
+};
 
-export default Aside
+export default Aside;

@@ -1,6 +1,7 @@
-import React from 'react'
-import Link from '../link'
-import styles from './index.module.css'
+import React from 'react';
+import Link from '../link';
+import styles from './index.module.css';
+import logo from "../../images/blue-origami-bird-flipped.png";
 
 const Footer = () => {
   return (
@@ -12,6 +13,7 @@ const Footer = () => {
         <Link href="#" title="Going to 4" type="footer" />
         <Link href="#" title="Going to 5" type="footer" />
         <Link href="#" title="Going to 6" type="footer" />
+        <img className={styles.logo} src={logo} />
       </div>
       <p className={styles.university}>Software University 2019</p>
 
