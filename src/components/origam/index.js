@@ -15,7 +15,6 @@ const Origam = ({ description, author, index }) => {
           <small>Author: </small>
           {author.username}
         </span>
-        
       </div>
     </div>
   );
