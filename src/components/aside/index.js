@@ -9,7 +9,12 @@ const Aside = () => {
     <aside className={styles.container}>
       {links.map((navElement) => {
         return (
-          <Link href={navElement.link} title={navElement.title} type="aside" />
+          <Link
+            key={navElement.title}
+            href={navElement.link}
+            title={navElement.title}
+            type="aside"
+          />
         );
       })}
     </aside>
