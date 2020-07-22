@@ -1,8 +1,8 @@
-import React from 'react';
-import Header from '../header';
-import styles from './index.module.css';
-import Aside from '../aside';
-import Footer from '../footer';
+import React from "react";
+import Header from "../header";
+import styles from "./index.module.css";
+import Aside from "../aside";
+import Footer from "../footer";
 
 const PageLayout = (props) => {
   return (
@@ -10,7 +10,7 @@ const PageLayout = (props) => {
       <Header />
       <div className={styles.container}>
         <Aside />
-        <div className={styles['inner-container']}>
+        <div className={styles["inner-container"]}>
           {props.children}
         </div>
       </div>
