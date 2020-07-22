@@ -1,8 +1,8 @@
 import React from 'react';
+import styled from 'styled-components';
 import PageLayout from '../../components/page-layout';
 import Title from "../../components/title";
 import SubmitButton from "../../components/button/submit-button";
-import styles from './index.module.css';
 import Origamis from '../../components/origamis';
 
 
