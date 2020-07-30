@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import PageLayout from "../../components/page-layout";
 import Origamis from "../../components/origamis";
+import UserContext from "../../Context";
+import styles from './index.module.css';
 
 class ProfilePage extends Component {
   constructor(props) {
@@ -11,6 +13,8 @@ class ProfilePage extends Component {
       posts: null,
     };
   }
+
+  static contextType = UserContext;
 
   componentDidMount() {
     this.getUser(this.props.match.params.userid);
@@ -30,6 +34,11 @@ class ProfilePage extends Component {
     });
   };
 
+  logOut = () => {
+    this.context.logOut();
+    this.props.history.push('/');
+  }
+
   render() {
     const { username, posts } = this.state;
 
@@ -43,9 +52,11 @@ class ProfilePage extends Component {
 
     return (
       <PageLayout>
-        <div>
+        <div className={styles.container}>
           <p>User: {username}</p>
           <p>Posts: {posts}</p>
+
+          <button onClick={this.logOut}>Logout</button>
         </div>
         <Origamis length={3} />
       </PageLayout>

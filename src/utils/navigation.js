@@ -1,4 +1,5 @@
 const getNavigation = (loggedIn, user) => {
+  
   const authLinks = [
     {
       title: "Publications",
