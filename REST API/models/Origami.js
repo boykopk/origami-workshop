@@ -1,20 +1,21 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const Model = mongoose.model;
-const { String, Number, Boolean, ObjectId } = Schema.Types;
+const { String, ObjectId } = Schema.Types;
 
-const origamiSchema = new Schema({
-
+const origamiSchema = new Schema(
+  {
     description: {
-        type: String,
-        required: true,
+      type: String,
+      required: true,
     },
 
     author: {
-        type: ObjectId,
-        ref: "User"
-    }
+      type: ObjectId,
+      ref: "User",
+    },
+  },
+  { timestamps: { createdAt: "created_at" } }
+);
 
-});
-
-module.exports = new Model('Origami', origamiSchema);
+module.exports = new Model("Origami", origamiSchema);

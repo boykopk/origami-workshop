@@ -9,9 +9,9 @@ class Footer extends Component {
   static contextType = UserContext;
 
   render() {
-    const { loggedIn, user } = this.context;
+    const { user } = this.context;
 
-    const links = getNavigation(loggedIn, user);
+    const links = getNavigation(user);
     
     return (
       <footer className={styles.footer}>
@@ -26,7 +26,7 @@ class Footer extends Component {
               />
             );
           })}
-          <img className={styles.logo} src={logo} />
+          <img alt="logo" className={styles.logo} src={logo} />
         </div>
         <p className={styles.university}>Software University 2019</p>
       </footer>
